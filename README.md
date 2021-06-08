@@ -39,3 +39,17 @@ A set of VMs is managed through a hypervisor. A hypervisor provides the virtuali
 The utilization of VMs introduced standardization in infrastructure provisioning, in association with efficient use of available infrastructure. Instead of running an application per server, a hypervisor enables multiple VMs to run at the same time to host multiple applications. However, there is one downside to this mechanism: it is not efficient enough. For example, applications A, B, and C uses the same Operating System. Replicating an OS consumes a lot of resources, and the more applications we run the more space we allocate to the replication of the operating systems alone.
 
 ![image](https://user-images.githubusercontent.com/44070137/121231347-4c72b900-c85e-11eb-9bbc-e3b64539eda1.png)
+
+A Dockerfile is a set of instructions used to create a Docker image. Each instruction is an operation used to package the application, such as installing dependencies, compile the code, or impersonate a specific user. A Docker image is composed of multiple layers, and each layer is represented by an instruction in the Dockerfile. All layers are cached and if an instruction is modified, then during the build process only the changed layer will be rebuild. As a result, building a Docker image using a Dockerfile is a lightweight and quick process.
+- https://docs.docker.com/engine/reference/builder/#from
+- https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
+Once a Dockerfile is constructed, these instructions are used to build a Docker image. A Docker image is a read-only template that enables the creation of a runnable instance of an application. In a nutshell, a Docker image provides the execution environment for an application, including any essential code, config files, and dependencies.
+- https://docs.docker.com/engine/reference/commandline/build/
+- https://docs.docker.com/engine/reference/commandline/run/
+The image needs to be pushed to a public Docker image registry, such as DockerHub, Harbor, Google Container Registry, etc. for other engineers on the team to access it.
+- https://docs.docker.com/registry/introduction/
+- https://docs.docker.com/engine/reference/commandline/tag/
+- https://docs.docker.com/engine/reference/commandline/push/
+- https://www.docker.com/blog/demystifying-open-container-initiative-oci-specifications/
+- https://buildpacks.io/docs/app-journey/
+

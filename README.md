@@ -32,3 +32,9 @@ Observability - ability to independently troubleshoot and debug each component
     - https://www.youtube.com/watch?v=t7iVCIYQbgk
 
 ## Lesson 3 Notes -
+a VM is composed of an operating system (OS) with a set of pre-installed libraries and packages. During execution, an application utilizes an OS filesystem, resources, and packages.
+
+A set of VMs is managed through a hypervisor. A hypervisor provides the virtualization of the infrastructure which is composed of physical servers. As a result, a hypervisor is capable of creating, configuring, and managing multiple VMs on the available servers. For example, we are able to running applications A, B, and C on 3 separate VMs.
+
+The utilization of VMs introduced standardization in infrastructure provisioning, in association with efficient use of available infrastructure. Instead of running an application per server, a hypervisor enables multiple VMs to run at the same time to host multiple applications. However, there is one downside to this mechanism: it is not efficient enough. For example, applications A, B, and C uses the same Operating System. Replicating an OS consumes a lot of resources, and the more applications we run the more space we allocate to the replication of the operating systems alone.
+![image](https://user-images.githubusercontent.com/44070137/121231347-4c72b900-c85e-11eb-9bbc-e3b64539eda1.png)

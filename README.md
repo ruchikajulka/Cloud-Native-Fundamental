@@ -19,16 +19,16 @@ Observability - ability to independently troubleshoot and debug each component
 
 ## Lesson 2 Notes - 
 
--About Monolith and Microservices 
+- About Monolith and Microservices 
    - https://nordicapis.com/whats-the-difference-between-monolith-and-microservices/
    - https://www.mulesoft.com/resources/api/microservices-vs-monolithic
     
--About Logging and Health Checks - 
-    -https://logz.io/blog/logging-best-practices/
-    -https://microservices.io/patterns/observability/health-check-api.html
-    -https://prometheus.io/docs/instrumenting/writing_exporters/#metrics
-    -https://www.tutorialspoint.com/log4j/log4j_logging_levels.htm
-    -https://containerjournal.com/topics/container-ecosystems/enabling-distributed-tracing-for-microservices-with-jaeger-in-kubernetes/
-    -https://www.youtube.com/watch?v=t7iVCIYQbgk
+- About Logging and Health Checks - 
+    - https://logz.io/blog/logging-best-practices/
+    - https://microservices.io/patterns/observability/health-check-api.html
+    - https://prometheus.io/docs/instrumenting/writing_exporters/#metrics
+    - https://www.tutorialspoint.com/log4j/log4j_logging_levels.htm
+    - https://containerjournal.com/topics/container-ecosystems/enabling-distributed-tracing-for-microservices-with-jaeger-in-kubernetes/
+    - https://www.youtube.com/watch?v=t7iVCIYQbgk
 
 ## Lesson 3 Notes -

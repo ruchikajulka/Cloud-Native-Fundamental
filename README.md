@@ -43,10 +43,14 @@ The utilization of VMs introduced standardization in infrastructure provisioning
 A Dockerfile is a set of instructions used to create a Docker image. Each instruction is an operation used to package the application, such as installing dependencies, compile the code, or impersonate a specific user. A Docker image is composed of multiple layers, and each layer is represented by an instruction in the Dockerfile. All layers are cached and if an instruction is modified, then during the build process only the changed layer will be rebuild. As a result, building a Docker image using a Dockerfile is a lightweight and quick process.
 - https://docs.docker.com/engine/reference/builder/#from
 - https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
+
 Once a Dockerfile is constructed, these instructions are used to build a Docker image. A Docker image is a read-only template that enables the creation of a runnable instance of an application. In a nutshell, a Docker image provides the execution environment for an application, including any essential code, config files, and dependencies.
+
 - https://docs.docker.com/engine/reference/commandline/build/
 - https://docs.docker.com/engine/reference/commandline/run/
+
 The image needs to be pushed to a public Docker image registry, such as DockerHub, Harbor, Google Container Registry, etc. for other engineers on the team to access it.
+
 - https://docs.docker.com/registry/introduction/
 - https://docs.docker.com/engine/reference/commandline/tag/
 - https://docs.docker.com/engine/reference/commandline/push/

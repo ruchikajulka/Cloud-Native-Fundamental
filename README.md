@@ -131,6 +131,7 @@ Kubernetes provides a rich collection of resources that are used to deploy, conf
 ![image](https://user-images.githubusercontent.com/44070137/121587197-84b2fc80-ca02-11eb-9b80-bf06e168aced.png)
 There are use cases where 2-3 containers run within the same pod, however, it is highly recommended to keep the 1:1 ratio between your pods and containers.
 To deploy an application to a Kubernetes cluster, a Deployment resource is necessary. All the pods are placed on the cluster nodes. A note can host multiple pods for different applications. A Deployment contains the specifications that describe the desired state of the application. Also, the Deployment resource manages pods by using a ReplicaSet. A ReplicaSet resource ensures that the desired amount of replicas for an application are up and running at all times.
+
 ![image](https://user-images.githubusercontent.com/44070137/121587780-29cdd500-ca03-11eb-9375-3e997b4889ab.png)
 
 - https://kubernetes.io/docs/concepts/workloads/pods/

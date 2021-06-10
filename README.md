@@ -118,3 +118,23 @@ To access a Kubernetes cluster a kubeconfig file is required. A kubeconfig file 
 - User - contains the user details that want access to the cluster, including the user name, and any authentication metadata, such as username, password, token or client, and key certificates.
 - Context - links a user to a cluster. If the user credentials are valid and the cluster is up, access to resources is granted. Also, a current-context can be specified, which instructs which context (cluster and user) should be used to query the cluster.
 - https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/
+
+Kubernetes provides a rich collection of resources that are used to deploy, configure, and manage an application. Some of the widely used resources are:
+
+- Pods - the atomic element within a cluster to manage an application
+- Deployments & ReplicaSets - oversees a set of pods for the same application
+- Services & Ingress - ensures connectivity and reachability to pods
+- Configmaps & Secrets - pass configuration to pods
+- Namespaces - provides a logical separation between multiple applications and their resources
+- Custom Resource Definition (CRD) - extends Kubernetes API to support custom resources
+
+![image](https://user-images.githubusercontent.com/44070137/121587197-84b2fc80-ca02-11eb-9b80-bf06e168aced.png)
+There are use cases where 2-3 containers run within the same pod, however, it is highly recommended to keep the 1:1 ratio between your pods and containers.
+To deploy an application to a Kubernetes cluster, a Deployment resource is necessary. All the pods are placed on the cluster nodes. A note can host multiple pods for different applications. A Deployment contains the specifications that describe the desired state of the application. Also, the Deployment resource manages pods by using a ReplicaSet. A ReplicaSet resource ensures that the desired amount of replicas for an application are up and running at all times.
+![image](https://user-images.githubusercontent.com/44070137/121587780-29cdd500-ca03-11eb-9375-3e997b4889ab.png)
+
+- https://kubernetes.io/docs/concepts/workloads/pods/
+- https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+- https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
+- https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
+

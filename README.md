@@ -132,10 +132,21 @@ Kubernetes provides a rich collection of resources that are used to deploy, conf
 There are use cases where 2-3 containers run within the same pod, however, it is highly recommended to keep the 1:1 ratio between your pods and containers.
 To deploy an application to a Kubernetes cluster, a Deployment resource is necessary. All the pods are placed on the cluster nodes. A note can host multiple pods for different applications. A Deployment contains the specifications that describe the desired state of the application. Also, the Deployment resource manages pods by using a ReplicaSet. A ReplicaSet resource ensures that the desired amount of replicas for an application are up and running at all times.
 
-![image](https://user-images.githubusercontent.com/44070137/121587780-29cdd500-ca03-11eb-9375-3e997b4889ab.png)
+A Service resource provides an abstraction layer over a collection of pods running an application. A Service is allocated a cluster IP, that can be used to transfer the traffic to any available pods for an application. There are 3 widely used Service types:
+
+- ClusterIP - exposes the service using an internal cluster IP. If no service type is specified, a ClusterIP service is created by default.
+- NodePort - expose the service using a port exposed on all nodes in the cluster.
+- LoadBalancer - exposes the service through a load balancer from a public cloud provider such as AWS, Azure, or GCP. This will allow the external traffic to reach the services within the cluster securely.
+
+To enable the external user to access services within the cluster an Ingress resource is necessary. An Ingress exposes HTTP and HTTPS routes to services within the cluster, using a load balancer provisioned by a cloud provider. Additionally, an Ingress resource has a set of rules that are used to map HTTP(S) endpoints to services running in the cluster. To keep the Ingress rules and load balancer up-to-date an Ingress Controller is introduced.
+For example, as shown in the image above, the customers will access the go-helloworld.com/hi HTTP route (1), which is managed by an Ingress (2). The Ingress Controller (3) examines the configured routes and directs the traffic to a LoadBalancer (4). And finally, the LoadBalancer directs the requests to the pods using a dedicated port (5).
+
+![image](https://user-images.githubusercontent.com/44070137/121588824-5f26f280-ca04-11eb-99e3-4b9305f83f80.png)
 
 - https://kubernetes.io/docs/concepts/workloads/pods/
 - https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 - https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
 - https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
+- https://kubernetes.io/docs/concepts/services-networking/service/
+- https://kubernetes.io/docs/concepts/services-networking/ingress/
 

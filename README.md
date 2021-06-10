@@ -149,4 +149,7 @@ For example, as shown in the image above, the customers will access the go-hello
 - https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
 - https://kubernetes.io/docs/concepts/services-networking/service/
 - https://kubernetes.io/docs/concepts/services-networking/ingress/
+- https://kubernetes.io/docs/concepts/configuration/configmap/
+- https://kubernetes.io/docs/concepts/configuration/secret/
+- https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
 

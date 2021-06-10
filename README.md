@@ -112,4 +112,4 @@ Worker node - a node from the Kubernetes data plane, that has installed componen
 - https://kubernetes.io/blog/2016/07/autoscaling-in-kubernetes/
 - https://kubernetes.io/docs/concepts/overview/components/
 
-
+Provisioning a Kubernetes cluster is known as the bootstrapping process. (https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/)

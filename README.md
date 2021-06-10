@@ -112,9 +112,9 @@ Worker node - a node from the Kubernetes data plane, that has installed componen
 - https://kubernetes.io/blog/2016/07/autoscaling-in-kubernetes/
 - https://kubernetes.io/docs/concepts/overview/components/
 
-Provisioning a Kubernetes cluster is known as the bootstrapping process. (https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/)
-To access a Kubernetes cluster a kubeconfig file is required. A kubeconfig file has all the necessary cluster metadata and authentication details, that grants the user permission to query the cluster objects. 
-A Kubeconfig file has 3 main distinct sections:
+Provisioning a Kubernetes cluster is known as the bootstrapping process. (https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/).
+To access a Kubernetes cluster a kubeconfig file is required. A kubeconfig file has all the necessary cluster metadata and authentication details, that grants the user permission to query the cluster objects. A Kubeconfig file has 3 main distinct sections:
 - Cluster - encapsulates the metadata for a cluster, such as the name of the cluster, API server endpoint, and certificate authority used to check the identity of the user.
 - User - contains the user details that want access to the cluster, including the user name, and any authentication metadata, such as username, password, token or client, and key certificates.
 - Context - links a user to a cluster. If the user credentials are valid and the cluster is up, access to resources is granted. Also, a current-context can be specified, which instructs which context (cluster and user) should be used to query the cluster.
+- https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/

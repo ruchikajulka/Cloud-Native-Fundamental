@@ -122,10 +122,10 @@ To access a Kubernetes cluster a kubeconfig file is required. A kubeconfig file 
 Kubernetes provides a rich collection of resources that are used to deploy, configure, and manage an application. Some of the widely used resources are:
 
 - Pods - the atomic element within a cluster to manage an application
-- Deployments & ReplicaSets - oversees a set of pods for the same application
-- Services & Ingress - ensures connectivity and reachability to pods
-- Configmaps & Secrets - pass configuration to pods
-- Namespaces - provides a logical separation between multiple applications and their resources
+- Deployments & ReplicaSets - oversees a set of pods for the same application (requires for application management)
+- Services & Ingress - ensures connectivity and reachability to pods (application reachability)
+- Configmaps & Secrets - pass configuration to pods (application configuration)
+- Namespaces - provides a logical separation between multiple applications and their resources (application context)
 - Custom Resource Definition (CRD) - extends Kubernetes API to support custom resources
 
 ![image](https://user-images.githubusercontent.com/44070137/121587197-84b2fc80-ca02-11eb-9b80-bf06e168aced.png)

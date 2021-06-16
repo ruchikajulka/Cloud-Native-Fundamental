@@ -165,3 +165,9 @@ kind - object type to be created or configured
 metadata - stores data that makes the object identifiable, such as its name, namespace, and labels
 spec - defines the desired configuration state of the resource
 
+- https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-command/
+- https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/
+- https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+- https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
+- 
+

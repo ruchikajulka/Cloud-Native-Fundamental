@@ -153,3 +153,15 @@ For example, as shown in the image above, the customers will access the go-hello
 - https://kubernetes.io/docs/concepts/configuration/secret/
 - https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
 
+Kubernetes is widely known for its support for imperative and declarative management techniques. The imperative approach enables the management of resources using kubectl commands directly on the live cluster. This technique is best suited for development stages only, as it presents a low entry-level bar to interact with the cluster.
+
+On the other side, the declarative approach uses manifests stored locally to create and manage Kubertenest objects. This approach is recommended for production releases, as we can version control the state of the deployed resources. However, this technique presents a high learning curve, as an in-depth understanding of the YAML manifest structure is required. Additionally, using YAML manifests unlocks the possibility of configuring more advanced options, such as volume mounts, readiness and liveness probes, etc.
+
+YAML Manifest structure
+A YAML manifest consists of 4 obligatory sections:
+
+apiversion - API version used to create a Kubernetes object
+kind - object type to be created or configured
+metadata - stores data that makes the object identifiable, such as its name, namespace, and labels
+spec - defines the desired configuration state of the resource
+

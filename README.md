@@ -198,3 +198,17 @@ https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 - Namespace - a logical separation between multiple applications and associated resources.
 - Imperative configuration - resource management technique, that operates and interacts directly with the live objects within the cluster.
 - Declarative configuration - resource management technique, that operates and manages resources using YAML manifests stored locally.
+
+Cloud Foundry - Cloud Foundry is an open-source PaaS, a stand-alone software package that can be installed on any available infrastructure; private, public, or hybrid cloud. Due to its open-source nature, there is no vendor lock-in and the community can contribute to its future releases and definition of the roadmap. As such, Cloud Foundry offers a production-grade release process through a solid developer experience, that enables any application to be deployed with ease.
+Note: some offerings of Cloud Foundry, can be deployed on top of Kubernetes, meaning that its main components are running as pods within a cluster.
+Cloud Foundry consists of multiple components that provide these core capabilities:
+- Routing - handle the incoming external traffic and route it to applications
+- Authentication - identity management to user accounts
+- Application lifecycle - controls the application deployments, monitors their status, and reconciles any new changes to reach the desired state of the application.
+- Application storage and execution - handle the availability of artifacts to applications
+- Service - use service brokers to provisions on-demand the dependency services for an application, such as a database or third-party APIs
+- Messaging - ensure the communication between Cloud Foundry components
+- Metrics and logging - aggregates the system and application metrics and logs
+- https://docs.cloudfoundry.org/concepts/overview.html
+- https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html
+- https://www.suse.com/c/moving-a-cloud-foundry-hello-world-app-to-kubernetes-src/

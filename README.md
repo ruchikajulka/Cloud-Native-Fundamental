@@ -224,5 +224,7 @@ Cloud Foundry:
 - write a manifest file to provide main application deployment parameters
 - deploy Cloud Foundry or use Cloud Foundry PaaS solutions from 3rd part vendors
 - deploy the application to Cloud Foundry (via CLI or UI)
-Note: Cloud Foundry will create the OCI compliant image by default, and it will provide the routing capacities as well.
-Cloud Foundry provides a better developer experience for application deployment, as it offers a greater level of component abstraction (no need to manage the underlying infrastructure). However, a PaaS solution locks-in the customer to a specific vendor. On the other side, Kubernetes offers full control over the container orchestration, providing more flexible management of the application.
+- Note: Cloud Foundry will create the OCI compliant image by default, and it will provide the routing capacities as well.
+- Cloud Foundry provides a better developer experience for application deployment, as it offers a greater level of component abstraction (no need to manage the underlying infrastructure). However, a PaaS solution locks-in the customer to a specific vendor. On the other side, Kubernetes offers full control over the container orchestration, providing more flexible management of the application.
+
+FaaS: https://www.redhat.com/en/topics/cloud-native-apps/what-is-faas?source=searchresultlisting

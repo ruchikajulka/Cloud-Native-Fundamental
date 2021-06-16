@@ -169,5 +169,12 @@ spec - defines the desired configuration state of the resource
 - https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/
 - https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
 - https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
-- 
+
+Kubernetes provides methods to handle some of the low-level failures and ensure the application is healthy and accessible. Some of these resources are:
+
+ReplicaSets - to ensure that the desired amount of replicas is up and running at all times
+Liveness probes - to check if the pod is running, and restart it if it is in an errored state
+Readiness probes - ensure that traffic is routed to that pods that are ready to handle requests
+Services - to provide one entry point to all the available pods of an application
+
 

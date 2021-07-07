@@ -228,3 +228,13 @@ Cloud Foundry:
 - Cloud Foundry provides a better developer experience for application deployment, as it offers a greater level of component abstraction (no need to manage the underlying infrastructure). However, a PaaS solution locks-in the customer to a specific vendor. On the other side, Kubernetes offers full control over the container orchestration, providing more flexible management of the application.
 
 FaaS: https://www.redhat.com/en/topics/cloud-native-apps/what-is-faas?source=searchresultlisting
+
+CI/CD -
+![image](https://user-images.githubusercontent.com/44070137/124809582-43910800-df2e-11eb-8044-677fcf5dc9c8.png)
+
+
+- Build - compile the application source code and its dependencies. If this stage fails the developer should address it immediately as there might be missing dependencies or errors in the code.
+- Test - run a suite of tests, such as unit testing, integration, UI, smoke, or security tests. These tests aim to validate the behavior of the code. If this stage fails, then developers must correct it to prevent dysfunctional code from reaching the end-users.
+- Package - create an executable that contains the latest code and its dependencies. This is a runnable instance of the application that can be deployed to end-users.
+- Deploy - push the packaged application to one or more environments, such as sandbox, staging, and production. Usually, the sandbox and staging deployments are automatic, and the production deployment requires engineering validation and triggering.
+

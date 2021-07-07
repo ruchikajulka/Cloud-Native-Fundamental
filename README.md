@@ -238,3 +238,7 @@ CI/CD -
 - Package - create an executable that contains the latest code and its dependencies. This is a runnable instance of the application that can be deployed to end-users.
 - Deploy - push the packaged application to one or more environments, such as sandbox, staging, and production. Usually, the sandbox and staging deployments are automatic, and the production deployment requires engineering validation and triggering.
 
+Important links (github) -
+- https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions
+- https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions#create-an-example-workflow
+- https://github.com/marketplace?type=actions

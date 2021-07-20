@@ -242,3 +242,18 @@ Important links (github) -
 - https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions
 - https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions#create-an-example-workflow
 - https://github.com/marketplace?type=actions
+
+## Configuration Manager 
+
+Helps in managing and scaling manifest files. A CI/CD pipeline is essential to automate and standardize the application release process. New changes are propagated through multiple environments, including the production cluster, and ensure that the consumers can use the latest features. In an ideal situation, all clusters are similarly configured, such that the engineering team can inspect a realistic simulation of a production deployment. This implies that a set of nearly similar manifests are required for each cluster, sandbox, staging, and production. To reduce the management overhead of overseeing a similar suite configuration for each cluster, templating is necessary.
+
+## Push-based model
+![image](https://user-images.githubusercontent.com/44070137/126387010-717deeec-87d9-4b18-ad44-398fc0824792.png)
+In a push-based model, as shown in the image below, the developer commits new code to the Git repository (1), which triggers the Continuous Integration stages (2). The code is packaged and distributed using an image registry, such as DockerHub (3). The Continuous Delivery stage is triggered once the YAML manifests are updated to reference the new image tag (4). A Continuous Delivery tool then pushed the updated manifests to multiple clusters (5).This model is fully operational and many tools within the ecosystem offer this deployment approach, e.g. Jenkins and CircleCI. However, there is one downside to this model: changes should be actively propagated to all environments. If this is not fulfilled, a scenario might be reached where multiple changes need to be deployed to production, which increases the failure rate and complicated the recovery procedures. Hence, wide awareness is required of features pushed to a production environment.
+
+## Pull-based model
+In a pull-based CI/CD approach, the release process is still be triggered by a developer that pushed new features to the source code (1). The package (2) of the application is similar, resulting in a new image stored in DockerHub (3). However, once the YAML manifests are updated with the new image tag, a pull-based Continuous Delivery tool identifies new changes (4) and applies them to a Kubernetes cluster (5). As a result, this simplifies the process of application release, as new features can be applied automatically as soon as they are available. 
+![image](https://user-images.githubusercontent.com/44070137/126387702-306f33ab-7531-4a1e-9f24-65efe9cade5c.png)
+
+
+
